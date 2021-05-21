@@ -74,36 +74,39 @@ def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
     # The experiment function should return a probability calculated and returned
     return count / num_experiments
 
-hat1 = Hat(black=6, red=4, green=3)
-hat1.draw(5)
-hat1.draw(4)
 
-hat1 = Hat(black=6, red=4, green=3)
-experiment(hat=hat1,
-            expected_balls={"red":2, "green":1},
-            num_balls_drawn=5,
-            num_experiments=2000)
+###### WORKING TEST BENCH AREA ######
+if __name__ == '__main__':
+    hat1 = Hat(black=6, red=4, green=3)
+    hat1.draw(5)
+    hat1.draw(4)
 
-hat2 = Hat(blue=3, red=2, green=6)
-experiment(hat=hat2,
-            expected_balls={"blue":2,"green":1},
-            num_balls_drawn=4,
-            num_experiments=1000) #ans = 0.26---0.272---0.28
+    hat1 = Hat(black=6, red=4, green=3)
+    experiment(hat=hat1,
+                expected_balls={"red":2, "green":1},
+                num_balls_drawn=5,
+                num_experiments=2000)
 
-hat3 = Hat(yellow=5,red=1,green=3,blue=9,test=1)
-experiment(hat=hat3,
-            expected_balls={"yellow":2,"blue":3,"test":1},
-            num_balls_drawn=20,
-            num_experiments=100) #ans = 1.0
+    hat2 = Hat(blue=3, red=2, green=6)
+    experiment(hat=hat2,
+                expected_balls={"blue":2,"green":1},
+                num_balls_drawn=4,
+                num_experiments=1000) #ans = 0.26---0.272---0.28
 
-hat4 = Hat(blue=3, red=2, green=6)
-experiment(hat=hat4,
-            expected_balls={"blue":2,"green":1},
-            num_balls_drawn=4,
-            num_experiments=3000)
+    hat3 = Hat(yellow=5,red=1,green=3,blue=9,test=1)
+    experiment(hat=hat3,
+                expected_balls={"yellow":2,"blue":3,"test":1},
+                num_balls_drawn=20,
+                num_experiments=100) #ans = 1.0
 
-hat5 = Hat(blue=4, red=2, green=6)
-experiment(hat=hat5,
-            expected_balls={"blue":2,"red":1},
-            num_balls_drawn=4,
-            num_experiments=3000)
+    hat4 = Hat(blue=3, red=2, green=6)
+    experiment(hat=hat4,
+                expected_balls={"blue":2,"green":1},
+                num_balls_drawn=4,
+                num_experiments=3000)
+
+    hat5 = Hat(blue=4, red=2, green=6)
+    experiment(hat=hat5,
+                expected_balls={"blue":2,"red":1},
+                num_balls_drawn=4,
+                num_experiments=3000)
