@@ -72,7 +72,7 @@ def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
                     count += 1
                     break
     # The experiment function should return a probability calculated and returned
-    return count / num_experiments
+    return print(count / num_experiments)
 
 
 ###### WORKING TEST BENCH AREA ######
